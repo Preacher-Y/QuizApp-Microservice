@@ -1,4 +1,4 @@
-package com.quizlet.quizapp.feature.questions.domain;
+package com.quizlet.quizapp.questions.domain;
 
 import lombok.Builder;
 import lombok.Getter;

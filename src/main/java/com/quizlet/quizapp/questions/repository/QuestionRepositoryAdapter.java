@@ -1,7 +1,7 @@
-package com.quizlet.quizapp.feature.questions.repository;
+package com.quizlet.quizapp.questions.repository;
 
-import com.quizlet.quizapp.feature.questions.domain.Question;
-import com.quizlet.quizapp.feature.questions.mapper.QuestionMapper;
+import com.quizlet.quizapp.questions.domain.Question;
+import com.quizlet.quizapp.questions.mapper.QuestionMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

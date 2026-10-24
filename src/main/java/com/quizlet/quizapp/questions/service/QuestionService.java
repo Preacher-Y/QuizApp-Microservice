@@ -1,14 +1,14 @@
-package com.quizlet.quizapp.feature.questions.service;
+package com.quizlet.quizapp.questions.service;
 
-import com.quizlet.quizapp.common.utils.PageResponseDto;
-import com.quizlet.quizapp.common.utils.exception.BadRequestException;
-import com.quizlet.quizapp.feature.questions.domain.Question;
-import com.quizlet.quizapp.feature.questions.dto.QuestionRequestDto;
-import com.quizlet.quizapp.feature.questions.dto.QuestionResponseDto;
-import com.quizlet.quizapp.feature.questions.exception.QuestionNotFoundException;
-import com.quizlet.quizapp.feature.questions.exception.QuestionsBadRequestException;
-import com.quizlet.quizapp.feature.questions.mapper.QuestionMapper;
-import com.quizlet.quizapp.feature.questions.repository.QuestionRepositoryAdapter;
+import com.quizlet.quizapp.utils.PageResponseDto;
+import com.quizlet.quizapp.utils.exception.BadRequestException;
+import com.quizlet.quizapp.questions.domain.Question;
+import com.quizlet.quizapp.questions.dto.QuestionRequestDto;
+import com.quizlet.quizapp.questions.dto.QuestionResponseDto;
+import com.quizlet.quizapp.questions.exception.QuestionNotFoundException;
+import com.quizlet.quizapp.questions.exception.QuestionsBadRequestException;
+import com.quizlet.quizapp.questions.mapper.QuestionMapper;
+import com.quizlet.quizapp.questions.repository.QuestionRepositoryAdapter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;

@@ -1,9 +1,9 @@
-package com.quizlet.quizapp.feature.questions.mapper;
+package com.quizlet.quizapp.questions.mapper;
 
-import com.quizlet.quizapp.feature.questions.domain.Question;
-import com.quizlet.quizapp.feature.questions.dto.QuestionRequestDto;
-import com.quizlet.quizapp.feature.questions.dto.QuestionResponseDto;
-import com.quizlet.quizapp.feature.questions.entity.QuestionEntity;
+import com.quizlet.quizapp.questions.domain.Question;
+import com.quizlet.quizapp.questions.dto.QuestionRequestDto;
+import com.quizlet.quizapp.questions.dto.QuestionResponseDto;
+import com.quizlet.quizapp.questions.entity.QuestionEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingConstants;
 import org.mapstruct.ReportingPolicy;

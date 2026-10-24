@@ -1,4 +1,4 @@
-package com.quizlet.quizapp.common.utils.exception;
+package com.quizlet.quizapp.utils.exception;
 
 public class BadRequestException extends RuntimeException {
     public BadRequestException(String message) {

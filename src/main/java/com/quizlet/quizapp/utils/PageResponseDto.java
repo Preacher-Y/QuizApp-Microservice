@@ -1,4 +1,4 @@
-package com.quizlet.quizapp.common.utils;
+package com.quizlet.quizapp.utils;
 
 import java.util.List;
 

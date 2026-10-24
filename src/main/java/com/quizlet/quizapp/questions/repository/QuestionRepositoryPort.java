@@ -1,6 +1,6 @@
-package com.quizlet.quizapp.feature.questions.repository;
+package com.quizlet.quizapp.questions.repository;
 
-import com.quizlet.quizapp.feature.questions.domain.Question;
+import com.quizlet.quizapp.questions.domain.Question;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

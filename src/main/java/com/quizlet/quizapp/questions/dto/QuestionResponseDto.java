@@ -1,4 +1,4 @@
-package com.quizlet.quizapp.feature.questions.dto;
+package com.quizlet.quizapp.questions.dto;
 
 import lombok.Builder;
 

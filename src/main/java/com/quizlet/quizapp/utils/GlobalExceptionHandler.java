@@ -1,7 +1,7 @@
-package com.quizlet.quizapp.common.utils;
+package com.quizlet.quizapp.utils;
 
-import com.quizlet.quizapp.common.utils.exception.BadRequestException;
-import com.quizlet.quizapp.common.utils.exception.NotFoundException;
+import com.quizlet.quizapp.utils.exception.BadRequestException;
+import com.quizlet.quizapp.utils.exception.NotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;

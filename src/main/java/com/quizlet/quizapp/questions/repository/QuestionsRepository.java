@@ -1,6 +1,6 @@
-package com.quizlet.quizapp.feature.questions.repository;
+package com.quizlet.quizapp.questions.repository;
 
-import com.quizlet.quizapp.feature.questions.entity.QuestionEntity;
+import com.quizlet.quizapp.questions.entity.QuestionEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;

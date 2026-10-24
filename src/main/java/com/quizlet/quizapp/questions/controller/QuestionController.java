@@ -1,16 +1,15 @@
-package com.quizlet.quizapp.feature.questions.controller;
+package com.quizlet.quizapp.questions.controller;
 
-import com.quizlet.quizapp.common.utils.PageResponseDto;
-import com.quizlet.quizapp.feature.questions.dto.QuestionRequestDto;
-import com.quizlet.quizapp.feature.questions.dto.QuestionResponseDto;
-import com.quizlet.quizapp.feature.questions.mapper.QuestionMapper;
-import com.quizlet.quizapp.feature.questions.service.QuestionService;
+import com.quizlet.quizapp.utils.PageResponseDto;
+import com.quizlet.quizapp.questions.dto.QuestionRequestDto;
+import com.quizlet.quizapp.questions.dto.QuestionResponseDto;
+import com.quizlet.quizapp.questions.mapper.QuestionMapper;
+import com.quizlet.quizapp.questions.service.QuestionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.UUID;
 
 @RestController

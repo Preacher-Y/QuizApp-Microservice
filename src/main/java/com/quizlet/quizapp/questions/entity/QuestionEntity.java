@@ -1,4 +1,4 @@
-package com.quizlet.quizapp.feature.questions.entity;
+package com.quizlet.quizapp.questions.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

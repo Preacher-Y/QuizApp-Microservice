@@ -1,6 +1,6 @@
-package com.quizlet.quizapp.feature.questions.exception;
+package com.quizlet.quizapp.questions.exception;
 
-import com.quizlet.quizapp.common.utils.exception.BadRequestException;
+import com.quizlet.quizapp.utils.exception.BadRequestException;
 
 public class QuestionsBadRequestException extends BadRequestException {
     public QuestionsBadRequestException() {
