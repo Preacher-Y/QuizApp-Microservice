@@ -1,5 +1,6 @@
 package com.quizlet.quizapp.feature.questions.controller;
 
+import com.quizlet.quizapp.common.utils.PageResponseDto;
 import com.quizlet.quizapp.feature.questions.dto.QuestionRequestDto;
 import com.quizlet.quizapp.feature.questions.dto.QuestionResponseDto;
 import com.quizlet.quizapp.feature.questions.mapper.QuestionMapper;
@@ -21,14 +22,11 @@ public class QuestionController {
     private final QuestionMapper questionMapper;
 
     @GetMapping
-    public ResponseEntity<List<QuestionResponseDto>> getAllQuestions(
+    public ResponseEntity<PageResponseDto<QuestionResponseDto>> getAllQuestions(
             @RequestParam(defaultValue = "10") int limit,
             @RequestParam(defaultValue = "1") int page
     ) {
-        return ResponseEntity.ok(
-                questionService.getAllQuestions(limit, page)
-                        .stream().map(questionMapper::toDto)
-                        .toList());
+        return ResponseEntity.ok(questionService.getAllQuestions(limit, page));
     }
 
     @GetMapping("{id}")

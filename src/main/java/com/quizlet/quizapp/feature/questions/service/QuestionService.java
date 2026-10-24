@@ -1,8 +1,10 @@
 package com.quizlet.quizapp.feature.questions.service;
 
+import com.quizlet.quizapp.common.utils.PageResponseDto;
 import com.quizlet.quizapp.common.utils.exception.BadRequestException;
 import com.quizlet.quizapp.feature.questions.domain.Question;
 import com.quizlet.quizapp.feature.questions.dto.QuestionRequestDto;
+import com.quizlet.quizapp.feature.questions.dto.QuestionResponseDto;
 import com.quizlet.quizapp.feature.questions.exception.QuestionNotFoundException;
 import com.quizlet.quizapp.feature.questions.exception.QuestionsBadRequestException;
 import com.quizlet.quizapp.feature.questions.mapper.QuestionMapper;
@@ -12,7 +14,6 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -22,13 +23,22 @@ public class QuestionService {
     private final QuestionRepositoryAdapter repo;
     private final QuestionMapper mapper;
 
-    public List<Question> getAllQuestions(int limit, int page) throws BadRequestException {
+    public PageResponseDto<QuestionResponseDto> getAllQuestions(int limit, int page) throws BadRequestException {
         if (page<=0 || limit <=0 ){
             throw new QuestionsBadRequestException();
         }
 
         var pagination = PageRequest.of(page-1, limit,Sort.by("difficultyLevel"));
-        return repo.findAll(pagination);
+        var pageData = repo.findAll(pagination);
+
+        return new PageResponseDto<>(
+                pageData.getContent().stream().map(mapper::toDto).toList(),
+                pageData.getNumber() + 1,
+                pageData.getTotalPages(),
+                pageData.getTotalElements()
+        );
+
+
     }
 
     public Question getQuestionById(UUID id) throws BadRequestException {
